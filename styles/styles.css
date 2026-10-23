@@ -1,0 +1,312 @@
+/* ===== Variabelen ===== */
+:root {
+  --paars: #6b2d8f;
+  --paars-donker: #4f2069;
+  --wit: #ffffff;
+  --grijs: #f4f4f4;
+  --tekst: #1a1a1a;
+  --schaduw: 0 7px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Basis (mobiel) ===== */
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;      /* 16px: goed leesbaar op telefoon */
+  line-height: 1.5;
+  color: var(--tekst);
+}
+
+img {
+  max-width: 100%;      /* afbeeldingen lopen nooit buiten het scherm */
+  height: auto;
+}
+
+/* ===== Skiplink ===== */
+.skiplink {
+  position: absolute;
+  top: -100px;
+  left: 10px;
+  background: var(--wit);
+  color: var(--paars-donker);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.skiplink:focus {
+  top: 10px;
+}
+
+/* ===== Header (mobiel) ===== */
+header {
+  display: flex;
+  flex-direction: column;   /* logo boven, menu eronder */
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+}
+
+.logo-knop img {
+  height: 48px;
+  width: auto;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;          /* links mogen naar de volgende regel */
+  justify-content: center;
+  gap: 8px;
+  list-style: none;
+}
+
+header nav a {
+  display: block;
+  padding: 12px 16px;       /* groot genoeg om met je duim te raken */
+  background-color: var(--paars);
+  color: var(--wit);
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+header nav a:hover {
+  background-color: var(--paars-donker);
+}
+
+/* ===== Header (vanaf tablet) ===== */
+@media (min-width: 700px) {
+  header {
+    flex-direction: row;    /* logo links, menu rechts */
+    justify-content: space-between;
+    padding: 16px 32px;
+  }
+
+  .logo-knop img {
+    height: 60px;
+  }
+
+  header nav ul {
+    gap: 24px;
+  }
+}
+
+/* ===== Main (mobiel) ===== */
+main {
+  max-width: 1100px;      /* op grote schermen niet eindeloos breed */
+  margin: 0 auto;         /* gecentreerd */
+  padding: 24px 16px;     /* kleiner dan op desktop */
+}
+
+h1 {
+  font-size: 1.75rem;     /* 28px */
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+h1 em {
+  color: var(--paars);
+  font-style: normal;
+}
+
+/* ===== Kaarten (mobiel) ===== */
+.kaarten-sectie {
+  display: flex;
+  flex-direction: column;  /* kaarten onder elkaar */
+  gap: 24px;
+  margin-top: 24px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grijs);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: var(--schaduw);
+}
+
+article h2 {
+  margin-bottom: 8px;
+}
+
+article > a {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 12px 16px;      /* groot genoeg voor een duim */
+  background-color: var(--paars);
+  color: var(--wit);
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+article > a:hover {
+  background-color: var(--paars-donker);
+}
+
+/* ===== Grids in de kaarten (mobiel) ===== */
+.iconen-grid,
+.illustraties-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* 2 per rij */
+  gap: 12px;
+  list-style: none;
+  margin-top: 16px;
+}
+
+.iconen-grid li {
+  text-align: center;
+}
+
+.iconen-grid span {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.illustraties-grid img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;       /* afbeelding wordt bijgesneden, niet uitgerekt */
+  border-radius: 4px;
+}
+
+/* ===== Statistieken (mobiel) ===== */
+dl {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* 2x2 */
+  gap: 24px;
+  margin-top: 32px;
+  padding: 24px 16px;
+  text-align: center;
+  background-color: var(--grijs);
+  border-radius: 8px;
+  box-shadow: var(--schaduw);
+}
+
+dl > div {
+  display: flex;
+  flex-direction: column-reverse;  /* getal boven, label eronder */
+}
+
+dt {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+dd {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--paars);
+}
+
+/* ===== Vanaf tablet ===== */
+@media (min-width: 700px) {
+  main {
+    padding: 48px 32px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .kaarten-sectie {
+    flex-direction: row;   /* kaarten naast elkaar */
+  }
+
+  article {
+    flex: 1;               /* beide kaarten even breed */
+    padding: 24px;
+  }
+
+  .iconen-grid,
+  .illustraties-grid {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  }
+
+  dl {
+    grid-template-columns: repeat(4, 1fr);  /* alle 4 naast elkaar */
+    padding: 32px;
+  }
+}
+
+/* ===== Footer (mobiel) ===== */
+footer {
+  display: flex;
+  flex-direction: column;   /* "Over" boven, de rest eronder */
+  gap: 24px;
+  margin-top: 32px;
+  padding: 24px 16px;
+  background-color: var(--paars);
+  color: var(--wit);
+}
+
+footer h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+footer a {
+  color: var(--wit);
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li a {
+  display: inline-block;
+  padding: 8px 0;
+}
+
+/* Links links, logo rechts */
+.footer-onder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;      /* logo staat verticaal in het midden */
+  gap: 16px;
+}
+
+/* De twee lijsten onder elkaar */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer-logo img {
+  width: 10px;
+}
+
+/* ===== Footer (vanaf tablet) ===== */
+@media (min-width: 700px) {
+  footer {
+    flex-direction: row;    /* tekst links, rest rechts */
+    padding: 32px;
+    margin-top: 48px;
+  }
+
+  .footer-over {
+    flex: 1;                /* neemt de helft van de ruimte */
+  }
+
+  .footer-onder {
+    flex: 1;
+  }
+
+  .footer-links {
+    flex-direction: row;    /* de twee lijsten naast elkaar */
+    gap: 32px;
+  }
+
+  .footer-logo img {
+    width: 10px;
+  }
+}
+
+
