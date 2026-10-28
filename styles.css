@@ -1,0 +1,624 @@
+/* ===== Variabelen ===== */
+:root {
+  --paars: #6b2d8f;
+  --paars-donker: #4f2069;
+  --paars-licht: #efe6f5;      /* hover-kleur */
+  --wit: #ffffff;
+  --grijs: #f4f4f4;
+  --tekst: #1a1a1a;
+  --tekst-zacht: #555555;
+  --rand: #cccccc;
+  --vlak: #ffffff;             /* wit vakje (voor dark mode) */
+  --schaduw: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --schaduw-klein: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Reset en basis ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;     /* ankerlinks scrollen zacht */
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: var(--tekst);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Max. ongeveer 12 woorden per regel, links uitgelijnd */
+p {
+  max-width: 65ch;
+  text-align: left;
+}
+
+/* ===== Skiplink ===== */
+.skiplink {
+  position: absolute;
+  top: -100px;
+  left: 10px;
+  padding: 10px;
+  background: var(--wit);
+  color: var(--paars-donker);
+}
+
+.skiplink:focus {
+  top: 10px;
+}
+
+/* ===== Header en menu ===== */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+}
+
+.logo-knop img {   /* logo */
+  height: 64px;               
+  width: auto;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  list-style: none;
+}
+
+/* Paarse knoppen in het menu */
+header nav a {
+  display: block;
+  padding: 12px 16px;
+  background-color: var(--paars);
+  color: var(--wit);
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+header nav a:hover,
+header nav a[aria-current="page"] {
+  background-color: var(--paars-donker);
+}
+
+/* ===== Inhoud ===== */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+main section {
+  margin-top: 32px;
+}
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+h1 em {
+  color: var(--paars);
+  font-style: normal;
+}
+
+h2 {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+/* ===== Knoppen (paarse border, lichtpaars bij hover) ===== */
+button {
+  padding: 12px 16px;
+  font-size: 1rem;
+  background-color: var(--paars);
+  color: var(--wit);
+  border: 2px solid var(--paars);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--paars-licht);
+  color: var(--paars-donker);
+}
+
+/* ===== Kaarten (homepage en "Nieuw toegevoegd") ===== */
+.kaarten-sectie {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;     /* inhoud onder elkaar, zodat de knop onderaan kan */
+  background-color: var(--grijs);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: var(--schaduw);
+}
+
+.nieuw-blok {
+  margin-top: 32px;
+}
+
+/* Paarse knop-link onderaan een kaart: in beide kaarten even hoog */
+article > a {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: auto;           /* duwt de knop naar de onderkant van de kaart */
+  padding: 12px 16px;
+  background-color: var(--paars);
+  color: var(--wit);
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+article > a:hover {
+  background-color: var(--paars-donker);
+}
+
+.iconen-grid,
+.illustraties-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 16px 0;
+  list-style: none;
+}
+
+/* Elk icoon in een eigen wit vakje met schaduw */
+.iconen-grid li {
+  padding: 5px 6px;
+  text-align: center;
+  background-color: var(--vlak);
+  border-radius: 8px;
+  box-shadow: var(--schaduw-klein);
+}
+
+.iconen-grid span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--tekst-zacht);
+}
+
+.illustraties-grid img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* ===== Statistieken ===== */
+dl {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+  padding: 24px 16px;
+  text-align: center;
+  background-color: var(--grijs);
+  border-radius: 8px;
+  box-shadow: var(--schaduw);
+}
+
+dl div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+dt {
+  font-size: 0.9rem;
+  color: var(--tekst-zacht);
+}
+
+dd {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--paars);
+}
+
+/* ===== Zoekformulier ===== */
+form[role="search"] {
+  display: flex;
+  flex-wrap: wrap;            /* veld en knop gaan naar de volgende regel als het te smal is */
+  gap: 8px;
+  max-width: 500px;
+  margin-top: 24px;
+}
+
+form[role="search"] label {
+  flex-basis: 100%;           /* label krijgt een eigen regel */
+  font-weight: bold;
+}
+
+input[type="search"] {
+  flex: 1 1 200px;            /* mag groeien, begint op 200px */
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid var(--paars);
+  border-radius: 4px;
+}
+
+/* Zoekknop: volledig paars, bij hover lichtpaars met donkere tekst */
+form[role="search"] button {
+  background-color: var(--paars);
+  color: var(--wit);
+}
+
+form[role="search"] button:hover {
+  background-color: var(--paars-licht);
+  color: var(--paars-donker);
+}
+
+/* ===== Variant-keuze: radio's als knoppen ===== */
+.variant-keuze {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+  border: none;
+}
+
+.variant-keuze legend {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Het echte radiorondje verstoppen; het label wordt de knop */
+.variant-keuze input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Alle varianten: volledig paars */
+.variant-keuze label {
+  padding: 12px 16px;
+  background-color: var(--paars);
+  color: var(--wit);
+  border: 2px solid var(--paars);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.variant-keuze label:hover {
+  background-color: var(--paars-licht);
+  color: var(--paars-donker);
+}
+
+/* Gekozen variant: donkerder paars met een vinkje */
+.variant-keuze input:checked + label {
+  background-color: var(--paars-donker);
+  border-color: var(--paars-donker);
+  color: var(--wit);
+  font-weight: bold;
+}
+
+.variant-keuze input:checked + label::before {
+  content: "✓ ";
+}
+
+/* Toetsenbord: zichtbare rand om de knop */
+.variant-keuze input:focus-visible + label {
+  outline: 3px solid var(--paars-donker);
+  outline-offset: 2px;
+}
+
+/* ===== Categorieën: uitklapmenu ===== */
+.categorie-menu {
+  margin-top: 24px;
+}
+
+.categorie-menu ul {
+  max-width: 320px;
+  margin-top: 8px;
+  list-style: none;
+  background-color: var(--wit);
+  border: 2px solid var(--paars);
+  border-radius: 4px;
+}
+
+/* Zonder deze regel blijft het menu altijd open (ons eigen CSS wint van "hidden") */
+.categorie-menu ul[hidden] {
+  display: none;
+}
+
+.categorie-menu li a {
+  display: block;
+  padding: 12px 16px;
+  color: var(--paars-donker);
+  text-decoration: none;
+}
+
+.categorie-menu li a:hover {
+  background-color: var(--paars-licht);
+}
+
+/* ===== Icoonraster per categorie ===== */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+  list-style: none;
+}
+
+.icon-grid li {
+  padding: 16px 8px;
+  text-align: center;
+  background-color: var(--grijs);
+  border-radius: 8px;
+}
+
+/* Elk icoon is een knop (opent de popup), maar ziet eruit als gewoon icoon + tekst */
+.icon-grid button,
+.iconen-grid button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.icon-grid button:hover span,
+.iconen-grid button:hover span {
+  text-decoration: underline;     /* laat zien dat het klikbaar is */
+}
+
+.icon-grid img {
+  display: block;
+  margin: 0 auto;
+}
+
+.icon-grid span {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+/* ===== Uitklapblokjes (details) ===== */
+details {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background-color: var(--grijs);
+  border-radius: 8px;
+}
+
+summary {
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+summary em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+details p {
+  margin: 8px 0;
+}
+
+details a {
+  color: var(--paars-donker);
+}
+
+/* ===== Download-pop-up ===== */
+dialog {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  padding: 24px;
+  border: none;
+  border-radius: 8px;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+dialog fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 12px 16px;
+  border: 1px solid var(--rand);
+  border-radius: 8px;
+}
+
+dialog select,
+dialog input[type="color"] {
+  padding: 8px;
+  font-size: 1rem;
+  border: 2px solid var(--paars);
+  border-radius: 4px;
+}
+
+/* ===== Icoon-popup ===== */
+.icoon-dialoog {
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;               /* lange popup? dan kun je scrollen */
+}
+
+.dialoog-kop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.icoon-dialoog section {
+  margin-top: 24px;
+}
+
+.icoon-dialoog h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.icoon-dialoog h4 {
+  margin-top: 16px;
+}
+
+#icoon-synoniemen {
+  padding-left: 20px;
+}
+
+.varianten-vergelijk {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  list-style: none;
+}
+
+.varianten-vergelijk li {
+  padding: 12px 8px;
+  text-align: center;
+  background-color: var(--grijs);
+  border-radius: 8px;
+}
+
+.varianten-vergelijk img {
+  display: block;
+  margin: 0 auto 8px auto;
+}
+
+.gebruik-keuze {
+  flex-direction: column;
+}
+
+.icoon-dialoog textarea {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 8px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  border: 1px solid var(--rand);
+  border-radius: 4px;
+}
+
+/* ===== Footer ===== */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 32px;
+  padding: 24px 16px;
+  background-color: var(--paars);
+  color: var(--wit);
+}
+
+.footer-teksten {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+footer h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+footer a {
+  color: var(--wit);
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li a {
+  display: inline-block;
+  padding: 8px 0;
+}
+
+footer img {
+  width: 60px;
+}
+
+/* ===== Vanaf tablet (700px) ===== */
+@media (min-width: 700px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 32px;
+  }
+
+  .logo-knop img {
+    height: 80px;
+  }
+
+  main {
+    padding: 48px 32px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .kaarten-sectie {
+    flex-direction: row;
+  }
+
+  article {
+    flex: 1;
+    padding: 24px;
+  }
+
+  .iconen-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .illustraties-grid,
+  .icon-grid,
+  .varianten-vergelijk,
+  dl {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  footer {
+    padding: 32px;
+  }
+
+  footer img {
+    width: 100px;
+  }
+}
+
+/* ===== Vanaf desktop (1000px) ===== */
+@media (min-width: 1000px) {
+  .footer-teksten {
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  .footer-teksten div {
+    flex: 1;
+  }
+}
