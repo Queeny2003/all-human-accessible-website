@@ -1,22 +1,13 @@
 // ===== DEEL 1: categorieën-uitklapmenu =====
-const categorieKnop = document.querySelector("#categorie-knop");
-const categorieLijst = document.querySelector("#categorie-lijst");
+// Openen en sluiten doet <details> zelf, daar is geen JavaScript voor nodig.
+// Dit stukje sluit het menu alleen weer als je op een categorie klikt.
+const categorieMenu = document.querySelector(".categorie-menu details");
 
-// Alleen doen als ze bestaan (dit script laadt op alle pagina's)
-if (categorieKnop && categorieLijst) {
-
-  // Klik op de knop: menu open of dicht
-  categorieKnop.addEventListener("click", function () {
-    const isOpen = categorieKnop.getAttribute("aria-expanded") === "true";
-    categorieKnop.setAttribute("aria-expanded", String(!isOpen));
-    categorieLijst.hidden = isOpen;
-  });
-
-  // Klik op een categorie: spring naar de sectie en sluit het menu
-  categorieLijst.addEventListener("click", function (event) {
+// Alleen doen als het menu bestaat (dit script laadt op alle pagina's)
+if (categorieMenu) {
+  categorieMenu.addEventListener("click", function (event) {
     if (event.target.tagName === "A") {
-      categorieLijst.hidden = true;
-      categorieKnop.setAttribute("aria-expanded", "false");
+      categorieMenu.open = false;
     }
   });
 }
@@ -31,7 +22,8 @@ const variantMappen = {
   diapositive: "Regular diapositive"
 };
 
-const variantRadios = document.querySelectorAll(".variant-keuze input");
+// Alleen de radio's van de pagina, niet die in de download-popup
+const variantRadios = document.querySelectorAll('input[name="variant"]');
 const rasterIconen = document.querySelectorAll(".icon-grid img, .iconen-grid img");
 
 variantRadios.forEach(function (radio) {
@@ -130,7 +122,7 @@ if (icoonDialoog) {
     });
 
     // Embedcode met de variant die op de pagina gekozen is
-    const gekozen = document.querySelector(".variant-keuze input:checked").value;
+    const gekozen = document.querySelector('input[name="variant"]:checked').value;
     embedVeld.value = '<img src="Iconenset-master/Svg/' + variantMappen[gekozen] + "/" + sleutel +
       '.svg" alt="' + info.naam + '" width="48" height="48">';
 
@@ -149,7 +141,7 @@ if (icoonDialoog) {
     });
   });
 
-  // Popup sluiten met de ✕ (Esc werkt vanzelf)
+  // Popup sluiten met de knop "Sluiten" (Esc werkt vanzelf)
   sluitKnop.addEventListener("click", function () {
     icoonDialoog.close();
   });
@@ -169,6 +161,9 @@ if (icoonDialoog) {
   const downloadBevestig = document.querySelector("#download-bevestig");
 
    downloadBevestig.addEventListener("click", async function () {
+    // Eerst de popup sluiten. Dan gaat hij altijd dicht, ook als het ophalen hieronder misgaat.
+    downloadDialoog.close();
+
     // Haal de keuzes op
     const variant = document.querySelector('input[name="dl-variant"]:checked').value;
     const formaat = document.querySelector("#dl-formaat").value;
@@ -190,7 +185,13 @@ if (icoonDialoog) {
     // Lees de inhoud van het bestand als tekst
     const svgTekst = await antwoord.text();
     console.log(svgTekst);
+  });
 
+  // Download-popup sluiten met "Sluiten" of "Annuleer"
+  document.querySelector("#sluit-download-dialoog").addEventListener("click", function () {
+    downloadDialoog.close();
+  });
+  document.querySelector("#download-annuleer").addEventListener("click", function () {
     downloadDialoog.close();
   });
 

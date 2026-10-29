@@ -17,7 +17,7 @@
         </a>
         <nav>
             <ul>
-                <li><a href="iconen.html" aria-current="page">Iconen</a></li>
+                <li><a href="iconen.html" class="actief">Iconen</a></li>
                 <li><a href="illustraties.html">Illustraties</a></li>
                 <li><a href="doe-mee.html">Doe mee</a></li>
                 <li><a href="rechtenvrij.html">Rechtenvrij</a></li>
@@ -30,11 +30,13 @@
     <h1>Maak eenvoudig gebruik van onze rechtenvrije <em>iconen</em></h1>
 
     <!-- Zoeken -->
-    <form role="search">
-        <label for="zoek">Zoek een icoon</label>
-        <input type="search" id="zoek" name="zoek" placeholder="Bijv. afval, parkeren, verhuizen">
-        <button type="submit">Zoeken</button>
-    </form>
+    <search>
+        <form class="zoekformulier">
+            <label for="zoek">Zoek een icoon</label>
+            <input type="search" id="zoek" name="zoek" placeholder="Bijv. afval, parkeren, verhuizen">
+            <button type="submit">Zoeken</button>
+        </form>
+    </search>
 
     <!-- Recent toegevoegde iconen -->
     <article class="nieuw-blok">
@@ -86,15 +88,17 @@
     </fieldset>
 
     <!-- Categorie-menu als uitklapmenu -->
-    <nav aria-label="Categorieën" class="categorie-menu">
-        <button type="button" id="categorie-knop" aria-expanded="false" aria-controls="categorie-lijst">Categorieën ▾</button>
-        <ul id="categorie-lijst" hidden>
+    <nav class="categorie-menu">
+        <details>
+            <summary>Categorieën</summary>
+            <ul id="categorie-lijst">
             <li><a href="#afval">Afval en milieu</a></li>
             <li><a href="#burgerzaken">Burgerzaken</a></li>
             <li><a href="#zorg">Zorg en welzijn</a></li>
             <li><a href="#wonen">Wonen en openbare ruimte</a></li>
             <li><a href="#ondernemen">Ondernemen en inkomen</a></li>
-        </ul>
+            </ul>
+        </details>
     </nav>
 
     <!-- één section per categorie -->
@@ -242,10 +246,10 @@
     </section>
 
     <!-- Icoon-popup: wordt door script.js gevuld met het icoon waarop je klikt -->
-    <dialog id="icoon-dialoog" class="icoon-dialoog" aria-labelledby="icoon-titel">
+    <dialog id="icoon-dialoog" class="icoon-dialoog">
         <div class="dialoog-kop">
             <h2 id="icoon-titel">Icoon</h2>
-            <button type="button" id="sluit-icoon-dialoog" aria-label="Sluiten">✕</button>
+            <button type="button" id="sluit-icoon-dialoog">Sluiten</button>
         </div>
 
         <section>
@@ -288,7 +292,7 @@
                 <label><input type="radio" name="gebruik" value="decoratief" checked> Decoratief (naast tekst die al hetzelfde zegt)</label>
                 <label><input type="radio" name="gebruik" value="informatief"> Informatief (het icoon draagt zelf betekenis, zonder tekst erbij)</label>
             </fieldset>
-            <p id="toegankelijkheid-advies" role="status" aria-live="polite"></p>
+            <output id="toegankelijkheid-advies"></output>
         </section>
 
         <section>
@@ -310,12 +314,11 @@
     </dialog>
 
     <!-- Download-pop-up -->
-    <!-- Download-pop-up -->
-<dialog id="download-dialoog" class="download-dialoog" aria-labelledby="dl-titel">
+<dialog id="download-dialoog" class="download-dialoog">
     <form method="dialog">
         <div class="dialoog-kop">
             <h2 id="dl-titel">Download <span id="dl-naam">Icoon</span></h2>
-            <button type="button" id="sluit-download-dialoog" class="sluit-knop" aria-label="Sluiten">✕</button>
+            <button type="button" id="sluit-download-dialoog" class="sluit-knop">Sluiten</button>
         </div>
 
         <div class="dialoog-inhoud">
