@@ -87,8 +87,9 @@ header nav a {
   border-radius: 4px;
 }
 
+/* .actief = de pagina waar je nu bent */
 header nav a:hover,
-header nav a[aria-current="page"] {
+header nav a.actief {
   background-color: var(--paars-donker);
 }
 
@@ -189,6 +190,15 @@ article > a:hover {
   background-color: var(--vlak);
   border-radius: 8px;
   box-shadow: var(--schaduw-klein);
+}
+
+/* Grootte van de iconen staat hier, dan hoeft het niet in elke <img> */
+.iconen-grid img,
+.icon-grid img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
 }
 
 .iconen-grid span {
@@ -319,6 +329,36 @@ form[role="search"] button:hover {
   outline-offset: 2px;
 }
 
+/* ===== Variant wisselen zonder JavaScript ===== */
+/* Elk icoon staat 4 keer in de HTML (line, fill, regular, diapositive).
+   CSS laat alleen de variant zien die bij de aangevinkte knop hoort.
+   main:has(#variant-fill:checked) betekent:
+   "als er in main een aangevinkte #variant-fill zit, dan..." */
+
+/* Standaard: alleen Line zichtbaar */
+.icon-grid .fill,
+.icon-grid .regular,
+.icon-grid .diapositive,
+.iconen-grid .fill,
+.iconen-grid .regular,
+.iconen-grid .diapositive {
+  display: none;
+}
+
+/* Andere variant gekozen? Verberg Line... */
+main:has(#variant-fill:checked) .line,
+main:has(#variant-regular:checked) .line,
+main:has(#variant-diapositive:checked) .line {
+  display: none;
+}
+
+/* ...en toon de gekozen variant */
+main:has(#variant-fill:checked) .fill,
+main:has(#variant-regular:checked) .regular,
+main:has(#variant-diapositive:checked) .diapositive {
+  display: block;
+}
+
 /* ===== Categorieën: uitklapmenu ===== */
 .categorie-menu {
   margin-top: 24px;
@@ -331,11 +371,6 @@ form[role="search"] button:hover {
   background-color: var(--wit);
   border: 2px solid var(--paars);
   border-radius: 4px;
-}
-
-/* Zonder deze regel blijft het menu altijd open (ons eigen CSS wint van "hidden") */
-.categorie-menu ul[hidden] {
-  display: none;
 }
 
 .categorie-menu li a {
@@ -383,11 +418,6 @@ form[role="search"] button:hover {
   text-decoration: underline;     /* laat zien dat het klikbaar is */
 }
 
-.icon-grid img {
-  display: block;
-  margin: 0 auto;
-}
-
 .icon-grid span {
   display: block;
   margin-top: 8px;
@@ -420,7 +450,9 @@ details a {
   color: var(--paars-donker);
 }
 
-/* ===== Download-pop-up ===== */
+/* ===== Icoon-popup ===== */
+/* De popup is een <dialog> met het attribuut popover.
+   Openen en sluiten doet de browser zelf, zonder JavaScript. */
 dialog {
   width: 90%;
   max-width: 400px;
@@ -434,30 +466,6 @@ dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-dialog form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-dialog fieldset {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 16px;
-  padding: 12px 16px;
-  border: 1px solid var(--rand);
-  border-radius: 8px;
-}
-
-dialog select,
-dialog input[type="color"] {
-  padding: 8px;
-  font-size: 1rem;
-  border: 2px solid var(--paars);
-  border-radius: 4px;
-}
-
-/* ===== Icoon-popup ===== */
 .icoon-dialoog {
   max-width: 600px;
   max-height: 90vh;
@@ -471,21 +479,17 @@ dialog input[type="color"] {
   gap: 16px;
 }
 
-.icoon-dialoog section {
-  margin-top: 24px;
+.icoon-dialoog p {
+  margin-top: 12px;
 }
 
 .icoon-dialoog h3 {
   font-size: 1.2rem;
-  margin-bottom: 8px;
+  margin: 24px 0 8px 0;
 }
 
-.icoon-dialoog h4 {
-  margin-top: 16px;
-}
-
-#icoon-synoniemen {
-  padding-left: 20px;
+.icoon-dialoog a {
+  color: var(--paars-donker);
 }
 
 .varianten-vergelijk {
@@ -504,11 +508,23 @@ dialog input[type="color"] {
 
 .varianten-vergelijk img {
   display: block;
+  width: 64px;
+  height: 64px;
   margin: 0 auto 8px auto;
 }
 
-.gebruik-keuze {
-  flex-direction: column;
+/* Downloadlink onder elke variant: paarse knop */
+.varianten-vergelijk a {
+  display: block;
+  padding: 8px;
+  background-color: var(--paars);
+  color: var(--wit);
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.varianten-vergelijk a:hover {
+  background-color: var(--paars-donker);
 }
 
 .icoon-dialoog textarea {
