@@ -1,364 +1,589 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iconen</title>
-    <meta name="description" content="Open en rechtenvrije iconenset voor Nederlandse gemeentelijke websites. 250 iconen in vier varianten.">
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts/scripts.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iconen</title>
+  <meta name="description" content="Open en rechtenvrije iconenset voor Nederlandse gemeentelijke websites. 250 iconen in vier varianten.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <a href="#inhoud" class="skiplink">Ga naar de inhoud</a>
 
-    <header>
-        <a href="index.html" class="logo-knop">
-            <img src="assets/logo-gemeentenconen.png" alt="Gemeenten-Iconen">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="iconen.html" class="actief">Iconen</a></li>
-                <li><a href="illustraties.html">Illustraties</a></li>
-                <li><a href="doe-mee.html">Doe mee</a></li>
-                <li><a href="rechtenvrij.html">Rechtenvrij</a></li>
-                <li><a href="credits.html">Credits</a></li>
-            </ul>
-        </nav>
-    </header>
-
-<main>
-    <h1>Maak eenvoudig gebruik van onze rechtenvrije <em>iconen</em></h1>
-
-    <!-- Zoeken -->
-    <search>
-        <form class="zoekformulier">
-            <label for="zoek">Zoek een icoon</label>
-            <input type="search" id="zoek" name="zoek" placeholder="Bijv. afval, parkeren, verhuizen">
-            <button type="submit">Zoeken</button>
-        </form>
-    </search>
-
-    <!-- Recent toegevoegde iconen -->
-    <article class="nieuw-blok">
-        <h2>Nieuw toegevoegd</h2>
-        <p>Recent gemaakt door gemeenten en overheidsinstanties.</p>
-        <ul class="iconen-grid">
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="Rolstoel">
-                    <img src="Iconenset-master/Svg/Line/Rolstoel.svg" alt="" width="48" height="48">
-                    <span>Rolstoel</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="HoogWater">
-                    <img src="Iconenset-master/Svg/Line/HoogWater.svg" alt="" width="48" height="48">
-                    <span>Hoog water</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="BladerenOpruimen">
-                    <img src="Iconenset-master/Svg/Line/BladerenOpruimen.svg" alt="" width="48" height="48">
-                    <span>Bladeren opruimen</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="MeldingStraatverlichting">
-                    <img src="Iconenset-master/Svg/Line/MeldingStraatverlichting.svg" alt="" width="48" height="48">
-                    <span>Melding straatverlichting</span>
-                </button>
-            </li>
-        </ul>
-    </article>
-
-    <!-- Variant kiezen: radio's die eruitzien als knoppen -->
-    <fieldset class="variant-keuze">
-        <legend>Variant</legend>
-
-        <input type="radio" name="variant" id="variant-line" value="line" checked>
-        <label for="variant-line">Line</label>
-
-        <input type="radio" name="variant" id="variant-fill" value="fill">
-        <label for="variant-fill">Fill</label>
-
-        <input type="radio" name="variant" id="variant-regular" value="regular">
-        <label for="variant-regular">Regular</label>
-
-        <input type="radio" name="variant" id="variant-diapositive" value="diapositive">
-        <label for="variant-diapositive">Diapositive</label>
-    </fieldset>
-
-    <!-- Categorie-menu als uitklapmenu -->
-    <nav class="categorie-menu">
-        <details>
-            <summary>Categorieën</summary>
-            <ul id="categorie-lijst">
-            <li><a href="#afval">Afval en milieu</a></li>
-            <li><a href="#burgerzaken">Burgerzaken</a></li>
-            <li><a href="#zorg">Zorg en welzijn</a></li>
-            <li><a href="#wonen">Wonen en openbare ruimte</a></li>
-            <li><a href="#ondernemen">Ondernemen en inkomen</a></li>
-            </ul>
-        </details>
+  <header>
+    <a href="index.html" class="logo-knop">
+      <img src="assets/logo-gemeentenconen.png" alt="Gemeenten-Iconen">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="iconen.html" class="actief">Iconen</a></li>
+        <li><a href="illustraties.html">Illustraties</a></li>
+        <li><a href="doe-mee.html">Doe mee</a></li>
+        <li><a href="rechtenvrij.html">Rechtenvrij</a></li>
+        <li><a href="credits.html">Credits</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- één section per categorie -->
-    <section id="afval">
-        <h2>Afval en milieu</h2>
-        <ul class="icon-grid">
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="Afval">
-                    <img src="Iconenset-master/Svg/Line/Afval.svg" alt="" width="48" height="48">
-                    <span>Afval</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="Afvalcontainer">
-                    <img src="Iconenset-master/Svg/Line/Afvalcontainer.svg" alt="" width="48" height="48">
-                    <span>Afvalcontainer</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="BladerenOpruimen">
-                    <img src="Iconenset-master/Svg/Line/BladerenOpruimen.svg" alt="" width="48" height="48">
-                    <span>Bladeren opruimen</span>
-                </button>
-            </li>
-        </ul>
-    </section>
+<main id="inhoud">
+  <h1>Maak eenvoudig gebruik van onze rechtenvrije <em>iconen</em></h1>
 
-    <section id="burgerzaken">
-        <h2>Burgerzaken</h2>
-        <ul class="icon-grid">
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="Aanmelden">
-                    <img src="Iconenset-master/Svg/Line/Aanmelden.svg" alt="" width="48" height="48">
-                    <span>Aanmelden</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="Begraafplaats">
-                    <img src="Iconenset-master/Svg/Line/Begraafplaats.svg" alt="" width="48" height="48">
-                    <span>Begraafplaats</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="Burgemeester">
-                    <img src="Iconenset-master/Svg/Line/Burgemeester.svg" alt="" width="48" height="48">
-                    <span>Burgemeester</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="Geboorte">
-                    <img src="Iconenset-master/Svg/Line/Geboorte.svg" alt="" width="48" height="48">
-                    <span>Geboorte</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="Paspoort">
-                    <img src="Iconenset-master/Svg/Line/Paspoort.svg" alt="" width="48" height="48">
-                    <span>Paspoort</span>
-                </button>
-            </li>
-        </ul>
-    </section>
-
-    <section id="zorg">
-        <h2>Zorg en welzijn</h2>
-        <ul class="icon-grid">
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="Gezicht">
-                    <img src="Iconenset-master/Svg/Line/Gezicht.svg" alt="" width="48" height="48">
-                    <span>Gezicht</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="Rolstoel">
-                    <img src="Iconenset-master/Svg/Line/Rolstoel.svg" alt="" width="48" height="48">
-                    <span>Rolstoel</span>
-                </button>
-            </li>
-        </ul>
-    </section>
-
-    <section id="wonen">
-        <h2>Wonen en openbare ruimte</h2>
-        <ul class="icon-grid">
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="Erfgoed">
-                    <img src="Iconenset-master/Svg/Line/Erfgoed.svg" alt="" width="48" height="48">
-                    <span>Erfgoed</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="HoogWater">
-                    <img src="Iconenset-master/Svg/Line/HoogWater.svg" alt="" width="48" height="48">
-                    <span>Hoog water</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="MeldingStraatverlichting">
-                    <img src="Iconenset-master/Svg/Line/MeldingStraatverlichting.svg" alt="" width="48" height="48">
-                    <span>Melding straatverlichting</span>
-                </button>
-            </li>
-        </ul>
-    </section>
-
-    <section id="ondernemen">
-        <h2>Ondernemen en inkomen</h2>
-        <ul class="icon-grid">
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="Inkomen">
-                    <img src="Iconenset-master/Svg/Line/Inkomen.svg" alt="" width="48" height="48">
-                    <span>Inkomen</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="icoon-knop" data-icoon="Ondernemen">
-                    <img src="Iconenset-master/Svg/Line/Ondernemen.svg" alt="" width="48" height="48">
-                    <span>Ondernemen</span>
-                </button>
-            </li>
-        </ul>
-    </section>
-
-    <!-- Uitleg voor ontwikkelaars -->
-    <section class="gebruik-opties">
-        <h2>Zo gebruik je de iconen</h2>
-
-        <details>
-            <summary><em>Direct uit GitHub</em></summary>
-            <p>Ontwikkelaars kunnen iconen rechtstreeks uit de repository laden, waardoor de set altijd actueel blijft op websites.</p>
-            <a href="https://github.com/OpenGemeenten/Iconenset/">Bekijk de repository</a>
-        </details>
-
-        <details>
-            <summary><em>Via webcomponenten</em></summary>
-            <p>Onder leiding van Frameless zijn er van de regular iconen webcomponenten gemaakt, waardoor deze eenvoudig te gebruiken zijn in Common Ground-projecten.</p>
-            <a href="https://frameless.github.io/iconset-npm/">Bekijk de documentatie</a>
-        </details>
-
-        <details>
-            <summary><em>Als SVG-download</em></summary>
-            <p>Liever alles in één keer binnenhalen? Download de complete set als ZIP-bestand.</p>
-            <a href="https://github.com/OpenGemeenten/Iconenset/archive/refs/heads/master.zip">Download de complete set</a>
-        </details>
-    </section>
-
-    <!-- Icoon-popup: wordt door script.js gevuld met het icoon waarop je klikt -->
-    <dialog id="icoon-dialoog" class="icoon-dialoog">
-        <div class="dialoog-kop">
-            <h2 id="icoon-titel">Icoon</h2>
-            <button type="button" id="sluit-icoon-dialoog">Sluiten</button>
-        </div>
-
-        <section>
-            <h3>Betekenis</h3>
-            <p id="icoon-betekenis"></p>
-
-            <h4>Synoniemen</h4>
-            <ul id="icoon-synoniemen"></ul>
-
-            <h4>Gebruiksadvies</h4>
-            <p>Gebruik dit icoon bij links of knoppen die erbij passen. Combineer het altijd met een tekstlabel, zodat de betekenis ook zonder icoon duidelijk is.</p>
-        </section>
-
-        <section>
-            <h3>Varianten vergelijken</h3>
-            <ul class="varianten-vergelijk">
-                <li>
-                    <img alt="" width="64" height="64">
-                    <span>Line</span>
-                </li>
-                <li>
-                    <img alt="" width="64" height="64">
-                    <span>Fill</span>
-                </li>
-                <li>
-                    <img alt="" width="64" height="64">
-                    <span>Regular</span>
-                </li>
-                <li>
-                    <img alt="" width="64" height="64">
-                    <span>Diapositive</span>
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h3>Toegankelijkheidschecker</h3>
-            <fieldset class="gebruik-keuze">
-                <legend>Hoe gebruik je dit icoon?</legend>
-                <label><input type="radio" name="gebruik" value="decoratief" checked> Decoratief (naast tekst die al hetzelfde zegt)</label>
-                <label><input type="radio" name="gebruik" value="informatief"> Informatief (het icoon draagt zelf betekenis, zonder tekst erbij)</label>
-            </fieldset>
-            <output id="toegankelijkheid-advies"></output>
-        </section>
-
-        <section>
-            <h3>Download</h3>
-            <button type="button" id="open-download-dialoog">Download dit icoon</button>
-        </section>
-
-        <section>
-            <h3>Embedcode</h3>
-            <label for="embed-code">Code voor dit icoon</label>
-            <textarea id="embed-code" readonly rows="3"></textarea>
-            <button type="button" id="kopieer-embed">Kopieer</button>
-        </section>
-
-        <section>
-            <h3>Licentie</h3>
-            <p>Dit icoon is vrijgegeven onder CC0 (publiek domein). Je mag het gratis gebruiken, aanpassen en verspreiden, zonder bronvermelding.</p>
-        </section>
-    </dialog>
-
-    <!-- Download-pop-up -->
-<dialog id="download-dialoog" class="download-dialoog">
-    <form method="dialog">
-        <div class="dialoog-kop">
-            <h2 id="dl-titel">Download <span id="dl-naam">Icoon</span></h2>
-            <button type="button" id="sluit-download-dialoog" class="sluit-knop">Sluiten</button>
-        </div>
-
-        <div class="dialoog-inhoud">
-            <fieldset class="variant-keuze">
-                <legend>Variant</legend>
-
-                <input type="radio" name="dl-variant" id="dl-variant-line" value="line" checked>
-                <label for="dl-variant-line">Line</label>
-
-                <input type="radio" name="dl-variant" id="dl-variant-fill" value="fill">
-                <label for="dl-variant-fill">Fill</label>
-
-                <input type="radio" name="dl-variant" id="dl-variant-regular" value="regular">
-                <label for="dl-variant-regular">Regular</label>
-
-                <input type="radio" name="dl-variant" id="dl-variant-diapositive" value="diapositive">
-                <label for="dl-variant-diapositive">Diapositive</label>
-            </fieldset>
-
-            <div class="veld">
-                <label for="dl-formaat">Formaat</label>
-                <select id="dl-formaat" name="dl-formaat">
-                    <option value="svg">SVG</option>
-                    <option value="png-64">PNG 64px</option>
-                    <option value="png-128">PNG 128px</option>
-                </select>
-            </div>
-
-            <div class="veld">
-                <label for="dl-kleur">Kleur</label>
-                <input type="color" id="dl-kleur" name="dl-kleur" value="#000000">
-            </div>
-        </div>
-
-        <div class="dialoog-acties">
-            <button type="button" id="download-bevestig" class="knop-paars">Download</button>
-            <button type="button" id="download-annuleer">Annuleer</button>
-        </div>
+  <!-- Zoeken -->
+  <search>
+    <form class="zoekformulier">
+      <label for="zoek">Zoek een icoon</label>
+      <input type="search" id="zoek" name="zoek" placeholder="Bijv. afval, parkeren, verhuizen">
+      <button type="submit">Zoeken</button>
     </form>
-</dialog>
+  </search>
+
+  <!-- Variant kiezen: de CSS (main:has) laat daardoor de juiste plaatjes zien -->
+  <fieldset class="variant-keuze">
+    <legend>Variant</legend>
+    <input type="radio" name="variant" id="variant-line" checked>
+    <label for="variant-line">Line</label>
+    <input type="radio" name="variant" id="variant-fill">
+    <label for="variant-fill">Fill</label>
+    <input type="radio" name="variant" id="variant-regular">
+    <label for="variant-regular">Regular</label>
+    <input type="radio" name="variant" id="variant-diapositive">
+    <label for="variant-diapositive">Diapositive</label>
+  </fieldset>
+
+  <!-- Recent toegevoegde iconen -->
+  <article class="nieuw-blok">
+    <h2>Nieuw toegevoegd</h2>
+    <p>Recent gemaakt door gemeenten en overheidsinstanties.</p>
+    <ul class="iconen-grid">
+      <li>
+        <button type="button" popovertarget="info-rolstoel">
+          <img class="line" src="Iconenset-master/Svg/Line/Rolstoel.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/Rolstoel.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/Rolstoel.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/Rolstoel.svg" alt="">
+          <span>Rolstoel</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" popovertarget="info-hoog-water">
+          <img class="line" src="Iconenset-master/Svg/Line/HoogWater.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/HoogWater.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/HoogWater.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/HoogWater.svg" alt="">
+          <span>Hoog water</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" popovertarget="info-bladeren-opruimen">
+          <img class="line" src="Iconenset-master/Svg/Line/BladerenOpruimen.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/BladerenOpruimen.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/BladerenOpruimen.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/BladerenOpruimen.svg" alt="">
+          <span>Bladeren opruimen</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" popovertarget="info-melding-straatverlichting">
+          <img class="line" src="Iconenset-master/Svg/Line/MeldingStraatverlichting.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/MeldingStraatverlichting.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/MeldingStraatverlichting.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/MeldingStraatverlichting.svg" alt="">
+          <span>Melding straatverlichting</span>
+        </button>
+      </li>
+    </ul>
+  </article>
+
+  <!-- Categorie-menu (details werkt zonder JavaScript) -->
+  <nav class="categorie-menu">
+    <details>
+      <summary>Categorieën</summary>
+      <ul>
+        <li><a href="#afval">Afval en milieu</a></li>
+        <li><a href="#burgerzaken">Burgerzaken</a></li>
+        <li><a href="#zorg">Zorg en welzijn</a></li>
+        <li><a href="#wonen">Wonen en openbare ruimte</a></li>
+        <li><a href="#ondernemen">Ondernemen en inkomen</a></li>
+      </ul>
+    </details>
+  </nav>
+
+  <section id="afval">
+    <h2>Afval en milieu</h2>
+    <ul class="icon-grid">
+      <li>
+        <button type="button" popovertarget="info-afval">
+          <img class="line" src="Iconenset-master/Svg/Line/Afval.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/Afval.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/Afval.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/Afval.svg" alt="">
+          <span>Afval</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" popovertarget="info-afvalcontainer">
+          <img class="line" src="Iconenset-master/Svg/Line/Afvalcontainer.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/Afvalcontainer.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/Afvalcontainer.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/Afvalcontainer.svg" alt="">
+          <span>Afvalcontainer</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" popovertarget="info-bladeren-opruimen">
+          <img class="line" src="Iconenset-master/Svg/Line/BladerenOpruimen.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/BladerenOpruimen.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/BladerenOpruimen.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/BladerenOpruimen.svg" alt="">
+          <span>Bladeren opruimen</span>
+        </button>
+      </li>
+    </ul>
+  </section>
+
+  <section id="burgerzaken">
+    <h2>Burgerzaken</h2>
+    <ul class="icon-grid">
+      <li>
+        <button type="button" popovertarget="info-aanmelden">
+          <img class="line" src="Iconenset-master/Svg/Line/Aanmelden.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/Aanmelden.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/Aanmelden.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/Aanmelden.svg" alt="">
+          <span>Aanmelden</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" popovertarget="info-begraafplaats">
+          <img class="line" src="Iconenset-master/Svg/Line/Begraafplaats.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/Begraafplaats.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/Begraafplaats.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/Begraafplaats.svg" alt="">
+          <span>Begraafplaats</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" popovertarget="info-burgemeester">
+          <img class="line" src="Iconenset-master/Svg/Line/Burgemeester.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/Burgemeester.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/Burgemeester.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/Burgemeester.svg" alt="">
+          <span>Burgemeester</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" popovertarget="info-geboorte">
+          <img class="line" src="Iconenset-master/Svg/Line/Geboorte.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/Geboorte.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/Geboorte.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/Geboorte.svg" alt="">
+          <span>Geboorte</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" popovertarget="info-paspoort">
+          <img class="line" src="Iconenset-master/Svg/Line/Paspoort.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/Paspoort.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/Paspoort.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/Paspoort.svg" alt="">
+          <span>Paspoort</span>
+        </button>
+      </li>
+    </ul>
+  </section>
+
+  <section id="zorg">
+    <h2>Zorg en welzijn</h2>
+    <ul class="icon-grid">
+      <li>
+        <button type="button" popovertarget="info-gezicht">
+          <img class="line" src="Iconenset-master/Svg/Line/Gezicht.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/Gezicht.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/Gezicht.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/Gezicht.svg" alt="">
+          <span>Gezicht</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" popovertarget="info-rolstoel">
+          <img class="line" src="Iconenset-master/Svg/Line/Rolstoel.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/Rolstoel.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/Rolstoel.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/Rolstoel.svg" alt="">
+          <span>Rolstoel</span>
+        </button>
+      </li>
+    </ul>
+  </section>
+
+  <section id="wonen">
+    <h2>Wonen en openbare ruimte</h2>
+    <ul class="icon-grid">
+      <li>
+        <button type="button" popovertarget="info-erfgoed">
+          <img class="line" src="Iconenset-master/Svg/Line/Erfgoed.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/Erfgoed.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/Erfgoed.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/Erfgoed.svg" alt="">
+          <span>Erfgoed</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" popovertarget="info-hoog-water">
+          <img class="line" src="Iconenset-master/Svg/Line/HoogWater.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/HoogWater.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/HoogWater.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/HoogWater.svg" alt="">
+          <span>Hoog water</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" popovertarget="info-melding-straatverlichting">
+          <img class="line" src="Iconenset-master/Svg/Line/MeldingStraatverlichting.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/MeldingStraatverlichting.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/MeldingStraatverlichting.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/MeldingStraatverlichting.svg" alt="">
+          <span>Melding straatverlichting</span>
+        </button>
+      </li>
+    </ul>
+  </section>
+
+  <section id="ondernemen">
+    <h2>Ondernemen en inkomen</h2>
+    <ul class="icon-grid">
+      <li>
+        <button type="button" popovertarget="info-inkomen">
+          <img class="line" src="Iconenset-master/Svg/Line/Inkomen.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/Inkomen.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/Inkomen.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/Inkomen.svg" alt="">
+          <span>Inkomen</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" popovertarget="info-ondernemen">
+          <img class="line" src="Iconenset-master/Svg/Line/Ondernemen.svg" alt="">
+          <img class="fill" src="Iconenset-master/Svg/Fill/Ondernemen.svg" alt="">
+          <img class="regular" src="Iconenset-master/Svg/Regular/Ondernemen.svg" alt="">
+          <img class="diapositive" src="Iconenset-master/Svg/Regular%20diapositive/Ondernemen.svg" alt="">
+          <span>Ondernemen</span>
+        </button>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Uitleg die voor ALLE iconen geldt (staat hier één keer i.p.v. in elke popup) -->
+  <section class="gebruik-opties">
+    <h2>Zo gebruik je de iconen</h2>
+
+    <details>
+      <summary><em>Toegankelijk gebruiken</em></summary>
+      <p>Combineer een icoon altijd met een tekstlabel, zodat de betekenis ook zonder icoon duidelijk is.</p>
+      <p><strong>Decoratief</strong> (naast tekst die hetzelfde zegt): gebruik een lege alt-tekst, alt="". Schermlezers slaan het icoon dan over.</p>
+      <p><strong>Informatief</strong> (zonder tekst erbij): geef een beschrijvende alt-tekst, bijvoorbeeld alt="Afval".</p>
+    </details>
+
+    <details>
+      <summary><em>Direct uit GitHub</em></summary>
+      <p>Ontwikkelaars kunnen iconen rechtstreeks uit de repository laden, waardoor de set altijd actueel blijft op websites.</p>
+      <a href="https://github.com/OpenGemeenten/Iconenset/">Bekijk de repository</a>
+    </details>
+
+    <details>
+      <summary><em>Via webcomponenten</em></summary>
+      <p>Onder leiding van Frameless zijn er van de regular iconen webcomponenten gemaakt, waardoor deze eenvoudig te gebruiken zijn in Common Ground-projecten.</p>
+      <a href="https://frameless.github.io/iconset-npm/">Bekijk de documentatie</a>
+    </details>
+
+    <details>
+      <summary><em>Als SVG-download</em></summary>
+      <p>Liever alles in één keer binnenhalen? Download de complete set als ZIP-bestand.</p>
+      <a href="https://github.com/OpenGemeenten/Iconenset/archive/refs/heads/master.zip">Download de complete set</a>
+    </details>
+
+    <details>
+      <summary><em>Licentie</em></summary>
+      <p>Alle iconen zijn vrijgegeven onder CC0 (publiek domein). Je mag ze gratis gebruiken, aanpassen en verspreiden, zonder bronvermelding.</p>
+    </details>
+  </section>
+
+
+  <!-- ===== POPUPS: één per icoon =====
+       De knop met popovertarget="info-afval" opent de popup met id="info-afval".
+       Nieuw icoon? Kopieer een hele <dialog> en verander de naam en bestandsnaam. -->
+
+  <dialog id="info-afval" class="icoon-dialoog" popover>
+    <div class="dialoog-kop">
+      <h2>Afval</h2>
+      <button type="button" popovertarget="info-afval" popovertargetaction="hide">Sluiten</button>
+    </div>
+    <p>Dit icoon wordt gebruikt om alles rondom afval, afvalinzameling en -verwerking aan te duiden, bijvoorbeeld bij formulieren, meldingen en informatiepagina's over afval.</p>
+    <p><strong>Synoniemen:</strong> vuilnis, huisvuil, afvalinzameling</p>
+    <h3>Varianten en download</h3>
+    <ul class="varianten-vergelijk">
+      <li><img src="Iconenset-master/Svg/Line/Afval.svg" alt=""><a href="Iconenset-master/Svg/Line/Afval.svg" download>Line</a></li>
+      <li><img src="Iconenset-master/Svg/Fill/Afval.svg" alt=""><a href="Iconenset-master/Svg/Fill/Afval.svg" download>Fill</a></li>
+      <li><img src="Iconenset-master/Svg/Regular/Afval.svg" alt=""><a href="Iconenset-master/Svg/Regular/Afval.svg" download>Regular</a></li>
+      <li><img src="Iconenset-master/Svg/Regular%20diapositive/Afval.svg" alt=""><a href="Iconenset-master/Svg/Regular%20diapositive/Afval.svg" download>Diapositive</a></li>
+    </ul>
+    <h3>Embedcode</h3>
+    <label for="embed-afval">Selecteer en kopieer met Ctrl+C</label>
+    <textarea id="embed-afval" readonly rows="3"><img src="Iconenset-master/Svg/Line/Afval.svg" alt="Afval" width="48" height="48"></textarea>
+  </dialog>
+
+  <dialog id="info-afvalcontainer" class="icoon-dialoog" popover>
+    <div class="dialoog-kop">
+      <h2>Afvalcontainer</h2>
+      <button type="button" popovertarget="info-afvalcontainer" popovertargetaction="hide">Sluiten</button>
+    </div>
+    <p>Betekenis en synoniemen volgen nog.</p>
+    <h3>Varianten en download</h3>
+    <ul class="varianten-vergelijk">
+      <li><img src="Iconenset-master/Svg/Line/Afvalcontainer.svg" alt=""><a href="Iconenset-master/Svg/Line/Afvalcontainer.svg" download>Line</a></li>
+      <li><img src="Iconenset-master/Svg/Fill/Afvalcontainer.svg" alt=""><a href="Iconenset-master/Svg/Fill/Afvalcontainer.svg" download>Fill</a></li>
+      <li><img src="Iconenset-master/Svg/Regular/Afvalcontainer.svg" alt=""><a href="Iconenset-master/Svg/Regular/Afvalcontainer.svg" download>Regular</a></li>
+      <li><img src="Iconenset-master/Svg/Regular%20diapositive/Afvalcontainer.svg" alt=""><a href="Iconenset-master/Svg/Regular%20diapositive/Afvalcontainer.svg" download>Diapositive</a></li>
+    </ul>
+    <h3>Embedcode</h3>
+    <label for="embed-afvalcontainer">Selecteer en kopieer met Ctrl+C</label>
+    <textarea id="embed-afvalcontainer" readonly rows="3"><img src="Iconenset-master/Svg/Line/Afvalcontainer.svg" alt="Afvalcontainer" width="48" height="48"></textarea>
+  </dialog>
+
+  <dialog id="info-bladeren-opruimen" class="icoon-dialoog" popover>
+    <div class="dialoog-kop">
+      <h2>Bladeren opruimen</h2>
+      <button type="button" popovertarget="info-bladeren-opruimen" popovertargetaction="hide">Sluiten</button>
+    </div>
+    <p>Betekenis en synoniemen volgen nog.</p>
+    <h3>Varianten en download</h3>
+    <ul class="varianten-vergelijk">
+      <li><img src="Iconenset-master/Svg/Line/BladerenOpruimen.svg" alt=""><a href="Iconenset-master/Svg/Line/BladerenOpruimen.svg" download>Line</a></li>
+      <li><img src="Iconenset-master/Svg/Fill/BladerenOpruimen.svg" alt=""><a href="Iconenset-master/Svg/Fill/BladerenOpruimen.svg" download>Fill</a></li>
+      <li><img src="Iconenset-master/Svg/Regular/BladerenOpruimen.svg" alt=""><a href="Iconenset-master/Svg/Regular/BladerenOpruimen.svg" download>Regular</a></li>
+      <li><img src="Iconenset-master/Svg/Regular%20diapositive/BladerenOpruimen.svg" alt=""><a href="Iconenset-master/Svg/Regular%20diapositive/BladerenOpruimen.svg" download>Diapositive</a></li>
+    </ul>
+    <h3>Embedcode</h3>
+    <label for="embed-bladeren-opruimen">Selecteer en kopieer met Ctrl+C</label>
+    <textarea id="embed-bladeren-opruimen" readonly rows="3"><img src="Iconenset-master/Svg/Line/BladerenOpruimen.svg" alt="Bladeren opruimen" width="48" height="48"></textarea>
+  </dialog>
+
+  <dialog id="info-aanmelden" class="icoon-dialoog" popover>
+    <div class="dialoog-kop">
+      <h2>Aanmelden</h2>
+      <button type="button" popovertarget="info-aanmelden" popovertargetaction="hide">Sluiten</button>
+    </div>
+    <p>Betekenis en synoniemen volgen nog.</p>
+    <h3>Varianten en download</h3>
+    <ul class="varianten-vergelijk">
+      <li><img src="Iconenset-master/Svg/Line/Aanmelden.svg" alt=""><a href="Iconenset-master/Svg/Line/Aanmelden.svg" download>Line</a></li>
+      <li><img src="Iconenset-master/Svg/Fill/Aanmelden.svg" alt=""><a href="Iconenset-master/Svg/Fill/Aanmelden.svg" download>Fill</a></li>
+      <li><img src="Iconenset-master/Svg/Regular/Aanmelden.svg" alt=""><a href="Iconenset-master/Svg/Regular/Aanmelden.svg" download>Regular</a></li>
+      <li><img src="Iconenset-master/Svg/Regular%20diapositive/Aanmelden.svg" alt=""><a href="Iconenset-master/Svg/Regular%20diapositive/Aanmelden.svg" download>Diapositive</a></li>
+    </ul>
+    <h3>Embedcode</h3>
+    <label for="embed-aanmelden">Selecteer en kopieer met Ctrl+C</label>
+    <textarea id="embed-aanmelden" readonly rows="3"><img src="Iconenset-master/Svg/Line/Aanmelden.svg" alt="Aanmelden" width="48" height="48"></textarea>
+  </dialog>
+
+  <dialog id="info-begraafplaats" class="icoon-dialoog" popover>
+    <div class="dialoog-kop">
+      <h2>Begraafplaats</h2>
+      <button type="button" popovertarget="info-begraafplaats" popovertargetaction="hide">Sluiten</button>
+    </div>
+    <p>Betekenis en synoniemen volgen nog.</p>
+    <h3>Varianten en download</h3>
+    <ul class="varianten-vergelijk">
+      <li><img src="Iconenset-master/Svg/Line/Begraafplaats.svg" alt=""><a href="Iconenset-master/Svg/Line/Begraafplaats.svg" download>Line</a></li>
+      <li><img src="Iconenset-master/Svg/Fill/Begraafplaats.svg" alt=""><a href="Iconenset-master/Svg/Fill/Begraafplaats.svg" download>Fill</a></li>
+      <li><img src="Iconenset-master/Svg/Regular/Begraafplaats.svg" alt=""><a href="Iconenset-master/Svg/Regular/Begraafplaats.svg" download>Regular</a></li>
+      <li><img src="Iconenset-master/Svg/Regular%20diapositive/Begraafplaats.svg" alt=""><a href="Iconenset-master/Svg/Regular%20diapositive/Begraafplaats.svg" download>Diapositive</a></li>
+    </ul>
+    <h3>Embedcode</h3>
+    <label for="embed-begraafplaats">Selecteer en kopieer met Ctrl+C</label>
+    <textarea id="embed-begraafplaats" readonly rows="3"><img src="Iconenset-master/Svg/Line/Begraafplaats.svg" alt="Begraafplaats" width="48" height="48"></textarea>
+  </dialog>
+
+  <dialog id="info-burgemeester" class="icoon-dialoog" popover>
+    <div class="dialoog-kop">
+      <h2>Burgemeester</h2>
+      <button type="button" popovertarget="info-burgemeester" popovertargetaction="hide">Sluiten</button>
+    </div>
+    <p>Betekenis en synoniemen volgen nog.</p>
+    <h3>Varianten en download</h3>
+    <ul class="varianten-vergelijk">
+      <li><img src="Iconenset-master/Svg/Line/Burgemeester.svg" alt=""><a href="Iconenset-master/Svg/Line/Burgemeester.svg" download>Line</a></li>
+      <li><img src="Iconenset-master/Svg/Fill/Burgemeester.svg" alt=""><a href="Iconenset-master/Svg/Fill/Burgemeester.svg" download>Fill</a></li>
+      <li><img src="Iconenset-master/Svg/Regular/Burgemeester.svg" alt=""><a href="Iconenset-master/Svg/Regular/Burgemeester.svg" download>Regular</a></li>
+      <li><img src="Iconenset-master/Svg/Regular%20diapositive/Burgemeester.svg" alt=""><a href="Iconenset-master/Svg/Regular%20diapositive/Burgemeester.svg" download>Diapositive</a></li>
+    </ul>
+    <h3>Embedcode</h3>
+    <label for="embed-burgemeester">Selecteer en kopieer met Ctrl+C</label>
+    <textarea id="embed-burgemeester" readonly rows="3"><img src="Iconenset-master/Svg/Line/Burgemeester.svg" alt="Burgemeester" width="48" height="48"></textarea>
+  </dialog>
+
+  <dialog id="info-geboorte" class="icoon-dialoog" popover>
+    <div class="dialoog-kop">
+      <h2>Geboorte</h2>
+      <button type="button" popovertarget="info-geboorte" popovertargetaction="hide">Sluiten</button>
+    </div>
+    <p>Betekenis en synoniemen volgen nog.</p>
+    <h3>Varianten en download</h3>
+    <ul class="varianten-vergelijk">
+      <li><img src="Iconenset-master/Svg/Line/Geboorte.svg" alt=""><a href="Iconenset-master/Svg/Line/Geboorte.svg" download>Line</a></li>
+      <li><img src="Iconenset-master/Svg/Fill/Geboorte.svg" alt=""><a href="Iconenset-master/Svg/Fill/Geboorte.svg" download>Fill</a></li>
+      <li><img src="Iconenset-master/Svg/Regular/Geboorte.svg" alt=""><a href="Iconenset-master/Svg/Regular/Geboorte.svg" download>Regular</a></li>
+      <li><img src="Iconenset-master/Svg/Regular%20diapositive/Geboorte.svg" alt=""><a href="Iconenset-master/Svg/Regular%20diapositive/Geboorte.svg" download>Diapositive</a></li>
+    </ul>
+    <h3>Embedcode</h3>
+    <label for="embed-geboorte">Selecteer en kopieer met Ctrl+C</label>
+    <textarea id="embed-geboorte" readonly rows="3"><img src="Iconenset-master/Svg/Line/Geboorte.svg" alt="Geboorte" width="48" height="48"></textarea>
+  </dialog>
+
+  <dialog id="info-paspoort" class="icoon-dialoog" popover>
+    <div class="dialoog-kop">
+      <h2>Paspoort</h2>
+      <button type="button" popovertarget="info-paspoort" popovertargetaction="hide">Sluiten</button>
+    </div>
+    <p>Betekenis en synoniemen volgen nog.</p>
+    <h3>Varianten en download</h3>
+    <ul class="varianten-vergelijk">
+      <li><img src="Iconenset-master/Svg/Line/Paspoort.svg" alt=""><a href="Iconenset-master/Svg/Line/Paspoort.svg" download>Line</a></li>
+      <li><img src="Iconenset-master/Svg/Fill/Paspoort.svg" alt=""><a href="Iconenset-master/Svg/Fill/Paspoort.svg" download>Fill</a></li>
+      <li><img src="Iconenset-master/Svg/Regular/Paspoort.svg" alt=""><a href="Iconenset-master/Svg/Regular/Paspoort.svg" download>Regular</a></li>
+      <li><img src="Iconenset-master/Svg/Regular%20diapositive/Paspoort.svg" alt=""><a href="Iconenset-master/Svg/Regular%20diapositive/Paspoort.svg" download>Diapositive</a></li>
+    </ul>
+    <h3>Embedcode</h3>
+    <label for="embed-paspoort">Selecteer en kopieer met Ctrl+C</label>
+    <textarea id="embed-paspoort" readonly rows="3"><img src="Iconenset-master/Svg/Line/Paspoort.svg" alt="Paspoort" width="48" height="48"></textarea>
+  </dialog>
+
+  <dialog id="info-gezicht" class="icoon-dialoog" popover>
+    <div class="dialoog-kop">
+      <h2>Gezicht</h2>
+      <button type="button" popovertarget="info-gezicht" popovertargetaction="hide">Sluiten</button>
+    </div>
+    <p>Betekenis en synoniemen volgen nog.</p>
+    <h3>Varianten en download</h3>
+    <ul class="varianten-vergelijk">
+      <li><img src="Iconenset-master/Svg/Line/Gezicht.svg" alt=""><a href="Iconenset-master/Svg/Line/Gezicht.svg" download>Line</a></li>
+      <li><img src="Iconenset-master/Svg/Fill/Gezicht.svg" alt=""><a href="Iconenset-master/Svg/Fill/Gezicht.svg" download>Fill</a></li>
+      <li><img src="Iconenset-master/Svg/Regular/Gezicht.svg" alt=""><a href="Iconenset-master/Svg/Regular/Gezicht.svg" download>Regular</a></li>
+      <li><img src="Iconenset-master/Svg/Regular%20diapositive/Gezicht.svg" alt=""><a href="Iconenset-master/Svg/Regular%20diapositive/Gezicht.svg" download>Diapositive</a></li>
+    </ul>
+    <h3>Embedcode</h3>
+    <label for="embed-gezicht">Selecteer en kopieer met Ctrl+C</label>
+    <textarea id="embed-gezicht" readonly rows="3"><img src="Iconenset-master/Svg/Line/Gezicht.svg" alt="Gezicht" width="48" height="48"></textarea>
+  </dialog>
+
+  <dialog id="info-rolstoel" class="icoon-dialoog" popover>
+    <div class="dialoog-kop">
+      <h2>Rolstoel</h2>
+      <button type="button" popovertarget="info-rolstoel" popovertargetaction="hide">Sluiten</button>
+    </div>
+    <p>Betekenis en synoniemen volgen nog.</p>
+    <h3>Varianten en download</h3>
+    <ul class="varianten-vergelijk">
+      <li><img src="Iconenset-master/Svg/Line/Rolstoel.svg" alt=""><a href="Iconenset-master/Svg/Line/Rolstoel.svg" download>Line</a></li>
+      <li><img src="Iconenset-master/Svg/Fill/Rolstoel.svg" alt=""><a href="Iconenset-master/Svg/Fill/Rolstoel.svg" download>Fill</a></li>
+      <li><img src="Iconenset-master/Svg/Regular/Rolstoel.svg" alt=""><a href="Iconenset-master/Svg/Regular/Rolstoel.svg" download>Regular</a></li>
+      <li><img src="Iconenset-master/Svg/Regular%20diapositive/Rolstoel.svg" alt=""><a href="Iconenset-master/Svg/Regular%20diapositive/Rolstoel.svg" download>Diapositive</a></li>
+    </ul>
+    <h3>Embedcode</h3>
+    <label for="embed-rolstoel">Selecteer en kopieer met Ctrl+C</label>
+    <textarea id="embed-rolstoel" readonly rows="3"><img src="Iconenset-master/Svg/Line/Rolstoel.svg" alt="Rolstoel" width="48" height="48"></textarea>
+  </dialog>
+
+  <dialog id="info-erfgoed" class="icoon-dialoog" popover>
+    <div class="dialoog-kop">
+      <h2>Erfgoed</h2>
+      <button type="button" popovertarget="info-erfgoed" popovertargetaction="hide">Sluiten</button>
+    </div>
+    <p>Betekenis en synoniemen volgen nog.</p>
+    <h3>Varianten en download</h3>
+    <ul class="varianten-vergelijk">
+      <li><img src="Iconenset-master/Svg/Line/Erfgoed.svg" alt=""><a href="Iconenset-master/Svg/Line/Erfgoed.svg" download>Line</a></li>
+      <li><img src="Iconenset-master/Svg/Fill/Erfgoed.svg" alt=""><a href="Iconenset-master/Svg/Fill/Erfgoed.svg" download>Fill</a></li>
+      <li><img src="Iconenset-master/Svg/Regular/Erfgoed.svg" alt=""><a href="Iconenset-master/Svg/Regular/Erfgoed.svg" download>Regular</a></li>
+      <li><img src="Iconenset-master/Svg/Regular%20diapositive/Erfgoed.svg" alt=""><a href="Iconenset-master/Svg/Regular%20diapositive/Erfgoed.svg" download>Diapositive</a></li>
+    </ul>
+    <h3>Embedcode</h3>
+    <label for="embed-erfgoed">Selecteer en kopieer met Ctrl+C</label>
+    <textarea id="embed-erfgoed" readonly rows="3"><img src="Iconenset-master/Svg/Line/Erfgoed.svg" alt="Erfgoed" width="48" height="48"></textarea>
+  </dialog>
+
+  <dialog id="info-hoog-water" class="icoon-dialoog" popover>
+    <div class="dialoog-kop">
+      <h2>Hoog water</h2>
+      <button type="button" popovertarget="info-hoog-water" popovertargetaction="hide">Sluiten</button>
+    </div>
+    <p>Betekenis en synoniemen volgen nog.</p>
+    <h3>Varianten en download</h3>
+    <ul class="varianten-vergelijk">
+      <li><img src="Iconenset-master/Svg/Line/HoogWater.svg" alt=""><a href="Iconenset-master/Svg/Line/HoogWater.svg" download>Line</a></li>
+      <li><img src="Iconenset-master/Svg/Fill/HoogWater.svg" alt=""><a href="Iconenset-master/Svg/Fill/HoogWater.svg" download>Fill</a></li>
+      <li><img src="Iconenset-master/Svg/Regular/HoogWater.svg" alt=""><a href="Iconenset-master/Svg/Regular/HoogWater.svg" download>Regular</a></li>
+      <li><img src="Iconenset-master/Svg/Regular%20diapositive/HoogWater.svg" alt=""><a href="Iconenset-master/Svg/Regular%20diapositive/HoogWater.svg" download>Diapositive</a></li>
+    </ul>
+    <h3>Embedcode</h3>
+    <label for="embed-hoog-water">Selecteer en kopieer met Ctrl+C</label>
+    <textarea id="embed-hoog-water" readonly rows="3"><img src="Iconenset-master/Svg/Line/HoogWater.svg" alt="Hoog water" width="48" height="48"></textarea>
+  </dialog>
+
+  <dialog id="info-melding-straatverlichting" class="icoon-dialoog" popover>
+    <div class="dialoog-kop">
+      <h2>Melding straatverlichting</h2>
+      <button type="button" popovertarget="info-melding-straatverlichting" popovertargetaction="hide">Sluiten</button>
+    </div>
+    <p>Betekenis en synoniemen volgen nog.</p>
+    <h3>Varianten en download</h3>
+    <ul class="varianten-vergelijk">
+      <li><img src="Iconenset-master/Svg/Line/MeldingStraatverlichting.svg" alt=""><a href="Iconenset-master/Svg/Line/MeldingStraatverlichting.svg" download>Line</a></li>
+      <li><img src="Iconenset-master/Svg/Fill/MeldingStraatverlichting.svg" alt=""><a href="Iconenset-master/Svg/Fill/MeldingStraatverlichting.svg" download>Fill</a></li>
+      <li><img src="Iconenset-master/Svg/Regular/MeldingStraatverlichting.svg" alt=""><a href="Iconenset-master/Svg/Regular/MeldingStraatverlichting.svg" download>Regular</a></li>
+      <li><img src="Iconenset-master/Svg/Regular%20diapositive/MeldingStraatverlichting.svg" alt=""><a href="Iconenset-master/Svg/Regular%20diapositive/MeldingStraatverlichting.svg" download>Diapositive</a></li>
+    </ul>
+    <h3>Embedcode</h3>
+    <label for="embed-melding-straatverlichting">Selecteer en kopieer met Ctrl+C</label>
+    <textarea id="embed-melding-straatverlichting" readonly rows="3"><img src="Iconenset-master/Svg/Line/MeldingStraatverlichting.svg" alt="Melding straatverlichting" width="48" height="48"></textarea>
+  </dialog>
+
+  <dialog id="info-inkomen" class="icoon-dialoog" popover>
+    <div class="dialoog-kop">
+      <h2>Inkomen</h2>
+      <button type="button" popovertarget="info-inkomen" popovertargetaction="hide">Sluiten</button>
+    </div>
+    <p>Betekenis en synoniemen volgen nog.</p>
+    <h3>Varianten en download</h3>
+    <ul class="varianten-vergelijk">
+      <li><img src="Iconenset-master/Svg/Line/Inkomen.svg" alt=""><a href="Iconenset-master/Svg/Line/Inkomen.svg" download>Line</a></li>
+      <li><img src="Iconenset-master/Svg/Fill/Inkomen.svg" alt=""><a href="Iconenset-master/Svg/Fill/Inkomen.svg" download>Fill</a></li>
+      <li><img src="Iconenset-master/Svg/Regular/Inkomen.svg" alt=""><a href="Iconenset-master/Svg/Regular/Inkomen.svg" download>Regular</a></li>
+      <li><img src="Iconenset-master/Svg/Regular%20diapositive/Inkomen.svg" alt=""><a href="Iconenset-master/Svg/Regular%20diapositive/Inkomen.svg" download>Diapositive</a></li>
+    </ul>
+    <h3>Embedcode</h3>
+    <label for="embed-inkomen">Selecteer en kopieer met Ctrl+C</label>
+    <textarea id="embed-inkomen" readonly rows="3"><img src="Iconenset-master/Svg/Line/Inkomen.svg" alt="Inkomen" width="48" height="48"></textarea>
+  </dialog>
+
+  <dialog id="info-ondernemen" class="icoon-dialoog" popover>
+    <div class="dialoog-kop">
+      <h2>Ondernemen</h2>
+      <button type="button" popovertarget="info-ondernemen" popovertargetaction="hide">Sluiten</button>
+    </div>
+    <p>Betekenis en synoniemen volgen nog.</p>
+    <h3>Varianten en download</h3>
+    <ul class="varianten-vergelijk">
+      <li><img src="Iconenset-master/Svg/Line/Ondernemen.svg" alt=""><a href="Iconenset-master/Svg/Line/Ondernemen.svg" download>Line</a></li>
+      <li><img src="Iconenset-master/Svg/Fill/Ondernemen.svg" alt=""><a href="Iconenset-master/Svg/Fill/Ondernemen.svg" download>Fill</a></li>
+      <li><img src="Iconenset-master/Svg/Regular/Ondernemen.svg" alt=""><a href="Iconenset-master/Svg/Regular/Ondernemen.svg" download>Regular</a></li>
+      <li><img src="Iconenset-master/Svg/Regular%20diapositive/Ondernemen.svg" alt=""><a href="Iconenset-master/Svg/Regular%20diapositive/Ondernemen.svg" download>Diapositive</a></li>
+    </ul>
+    <h3>Embedcode</h3>
+    <label for="embed-ondernemen">Selecteer en kopieer met Ctrl+C</label>
+    <textarea id="embed-ondernemen" readonly rows="3"><img src="Iconenset-master/Svg/Line/Ondernemen.svg" alt="Ondernemen" width="48" height="48"></textarea>
+  </dialog>
 
 </main>
 
